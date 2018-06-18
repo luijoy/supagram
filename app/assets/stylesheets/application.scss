@@ -143,3 +143,85 @@
    margin-top: 20px;
    margin-bottom: 40px;
  }
+
+/* ## Form styling Sign-up ## */
+
+html {
+  height: 100%;
+}
+
+.registration-bg {
+  padding-top: 4em;
+  height: calc(100vh - 55px);
+  background-image: image-url('vapor.jpg');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.log-in {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border: none;
+}
+
+.panel {
+  border-radius: 8px;
+}
+
+.panel-heading {
+  h1 {
+    text-align: center;
+  }
+}
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+.alert {
+  margin-bottom: 0px;
+  padding: 0px;
+}
+
+.notice {
+  margin: 0px;
+}
+
+.input-lg,
+.input-group-lg>.form-control,
+.input-group-lg>.input-group-addon,
+.input-group-lg>.input-group-btn>.btn {
+  margin-bottom: 20px;
+  border: solid 1px #8080804f;
+  border-radius: 4px;
+}
+
+.log-in {
+  margin-top: calc(30% - 55px);
+}
+
+/* ## Form styling New ## */
+
+.login-bg {
+  padding-top: 4em;
+  height: calc(100vh - 55px);
+  background-image: image-url('tree.jpg');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* ## Form styling post image ## */
+
+#image-preview {
+  margin: 0px auto;
+}
+
+#post_image {
+  padding: 1em;
+  margin: 0px auto;
+}
