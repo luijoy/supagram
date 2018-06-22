@@ -1,18 +1,38 @@
 module PostsHelper
-   def likers_of(post)
+
+  def display_likes(post)
     votes = post.votes_for.up.by_type(User)
-    user_names = []
-    unless votes.blank?
-      votes.voters.each do |voter|
-        user_names.push(link_to voter.user_name,
-                                profile_path(voter.user_name),
-                                class: 'user-name')
-      end
-      user_names.to_sentence.html_safe + like_plural(votes)
+    return list_likers(votes) if votes.size <= 8
+    count_likers(votes)
+  end
+
+  def liked_post(post)
+    if current_user.voted_for? post
+      return link_to '', unlike_post_path(post), remote: true, id: "like_#{post.id}",
+          class: "glyphicon glyphicon-heart"
+    else
+      link_to '', like_post_path(post), remote: true, id: "like_#{post.id}",
+          class: "glyphicon glyphicon-heart-empty"
     end
   end
 
   private
+
+  def list_likers(votes)
+    usernames = []
+    unless votes.blank?
+      votes.each do |vote|
+        usernames.push(link_to vote.voter.user_name,
+                                  profile_path(vote.voter.user_name),
+                                  class: 'user-name')
+      end
+      usernames.to_sentence.html_safe + like_plural(votes)
+    end
+  end
+
+  def count_likers(votes)
+    "#{votes.size} likes"
+  end
 
   def like_plural(votes)
     return ' like this' if votes.count > 1

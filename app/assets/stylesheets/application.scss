@@ -309,3 +309,14 @@ html {
   margin-top: 20px;
   margin-bottom: 7px;
 }
+
+.like {
+  text-decoration: none;
+  color: red;
+}
+
+.like-button a:hover,
+a:focus {
+  text-decoration: none;
+  color: red;
+}
