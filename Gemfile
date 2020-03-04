@@ -38,7 +38,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'haml'
 gem 'paperclip', '~> 4.2' #at the writing of this post
 gem 'simple_form'
-gem 'bootstrap-sass', '~> 3.3.7'
+gem 'bootstrap-sass', '~> 3.4.1'
 gem 'jquery-rails'
 gem 'devise'
 gem 'kaminari'
